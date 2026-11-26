@@ -517,7 +517,7 @@ Expected practices, when AI is used:
 
 **Verification examples:** AI system inventory; risk assessment; tool-permission matrix; prompt-injection tests; model evaluations; human-oversight procedure; model/version records; incident logs.
 
-**Primary references:** [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework), [ISO/IEC 42001](https://www.iso.org/standard/81230.html), and the [OWASP AI Security and Privacy Guide project](https://owasp.org/www-project-ai-security-and-privacy-guide/). Select controls based on the actual system and its risk; no single framework is sufficient for every AI use case.
+**Primary references:** [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework), [ISO/IEC 42001](https://www.iso.org/standard/81230.html), and the [OWASP AI Exchange](https://owaspai.org/). Select controls based on the actual system and its risk; no single framework is sufficient for every AI use case.
 
 ### 5.15 Documentation and engineering governance
 
@@ -611,7 +611,7 @@ External standards and frameworks provide more detailed requirements and assessm
 | [ISO/IEC 25010](https://www.iso.org/standard/78176.html) | Software and systems quality models | Structure product-quality evaluation. Confirm the applicable current edition and model. |
 | [WCAG 2.2](https://www.w3.org/TR/WCAG22/) | Web accessibility | Define testable web accessibility success criteria. |
 | [OWASP MASVS](https://mas.owasp.org/MASVS/) | Mobile application security | Assess mobile application security controls. |
-| [OWASP AI Security and Privacy Guide](https://owasp.org/www-project-ai-security-and-privacy-guide/) | AI security and privacy | Identify and address AI-specific risks. |
+| [OWASP AI Exchange](https://owaspai.org/) | AI security and privacy | Identify and address AI-specific risks. |
 | [NIST AI RMF](https://www.nist.gov/itl/ai-risk-management-framework) | AI risk management | Govern, map, measure, and manage AI risks. |
 | [ISO/IEC 42001](https://www.iso.org/standard/81230.html) | AI management systems | Establish an AI management system. |
 | [SLSA](https://slsa.dev/) | Software supply-chain integrity | Improve build provenance and artifact integrity. |
@@ -1061,7 +1061,7 @@ The links below point to official standards bodies, project maintainers, or esta
 - [ISO/IEC 27701](https://www.iso.org/standard/85819.html)
 - [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
 - [ISO/IEC 42001](https://www.iso.org/standard/81230.html)
-- [OWASP AI Security and Privacy Guide](https://owasp.org/www-project-ai-security-and-privacy-guide/)
+- [OWASP AI Exchange](https://owaspai.org/)
 
 ### APIs, payments, and service management
 
