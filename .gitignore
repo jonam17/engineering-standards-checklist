@@ -1,0 +1,9 @@
+# Python runtime and test caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# macOS metadata
+.DS_Store
+.AppleDouble
+.LSOverride

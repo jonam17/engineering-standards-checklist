@@ -1,0 +1,29 @@
+name: Link check
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    name: Check Markdown links
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: lycheeverse/lychee-action@v2
+        with:
+          # Some standards bodies (ISO, AICPA, PCI SSC) block automated
+          # checkers with 403/429; treat those as reachable rather than broken.
+          # The vendored Cloudflare snapshot is upstream content and is excluded.
+          args: >-
+            --no-progress
+            --max-concurrency 4
+            --accept '100..=103,200..=299,403,429'
+            --exclude-path vendor
+            '**/*.md'
+          fail: true

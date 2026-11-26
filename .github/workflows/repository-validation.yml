@@ -1,0 +1,44 @@
+name: Repository validation
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  repository:
+    name: Validate repository structure and references
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Validate repository
+        run: python3 scripts/validate_repository.py
+      - name: Verify vendored workflow-skill snapshots
+        run: >-
+          sha256sum --check
+          vendor/addyosmani/agent-skills.sha256
+          vendor/mattpocock/skills.sha256
+
+  cloudflare-vendor-tests:
+    name: Test vendored security-audit validators
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Verify vendor snapshot integrity
+        run: sha256sum --check vendor/cloudflare/security-audit-skill.sha256
+      - name: Run upstream validator tests
+        run: >-
+          node --test
+          vendor/cloudflare/security-audit-skill/skills/security-audit/validate-findings.test.cjs
+          vendor/cloudflare/security-audit-skill/skills/security-audit/validate-coverage-ledger.test.cjs
