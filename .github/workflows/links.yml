@@ -16,14 +16,23 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: lycheeverse/lychee-action@v2
+        env:
+          # Authenticated GitHub requests avoid rate-limit 503s on github.com links.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           # Some standards bodies (ISO, AICPA, PCI SSC) block automated
           # checkers with 403/429; treat those as reachable rather than broken.
-          # The vendored Cloudflare snapshot is upstream content and is excluded.
+          # ftc.gov answers GitHub-hosted runners with 404 and peoplecert.org with
+          # 500 even though the pages load in a browser, so they are excluded.
+          # Re-check those links by hand when editing them.
+          # The vendored upstream snapshots are not ours to fix and are excluded.
           args: >-
             --no-progress
             --max-concurrency 4
+            --max-retries 3
             --accept '100..=103,200..=299,403,429'
+            --exclude '^https://www\.ftc\.gov/'
+            --exclude '^https://www\.peoplecert\.org/'
             --exclude-path vendor
             '**/*.md'
           fail: true

@@ -21,3 +21,6 @@ This file records material repository changes. It does not replace the original 
 - Added optional workflow skills: Addy Osmani's `agent-skills` (all 26 skills and shared references, MIT, upstream `e997ac5`) and five standalone engineering skills from Matt Pocock's `skills` (MIT, upstream `6f7f783`), copied unchanged with licenses, checksum manifests, and credit in `THIRD-PARTY-NOTICES.md` and `NOTICE`.
 - Added `docs/workflow-skills.md` mapping each workflow skill to a checklist area.
 - The repository validator now checks all three vendored snapshots, requires their licenses and credits, and generates heading anchors the way GitHub does (`API & Testing` becomes `api--testing`).
+- README banner now spells out "ENGINEERING STANDARDS CHECKLIST".
+- Link check: excluded ftc.gov and peoplecert.org (they reject GitHub-hosted runners but load in browsers), added retries, and authenticated GitHub requests with `GITHUB_TOKEN` to avoid rate-limit errors.
+- Replaced the moved "OWASP AI Security and Privacy Guide" link with the OWASP AI Exchange (`https://owaspai.org/`) in the Universal Standard; only link targets and that project's name were changed.
