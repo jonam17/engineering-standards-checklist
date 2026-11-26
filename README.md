@@ -1,30 +1,9 @@
 <div align="center">
 
-```text
- _____ _   _  ____ ___ _   _ _____ _____ ____  ___ _   _  ____ 
-| ____| \ | |/ ___|_ _| \ | | ____| ____|  _ \|_ _| \ | |/ ___|
-|  _| |  \| | |  _ | ||  \| |  _| |  _| | |_) || ||  \| | |  _ 
-| |___| |\  | |_| || || |\  | |___| |___|  _ < | || |\  | |_| |
-|_____|_| \_|\____|___|_| \_|_____|_____|_| \_\___|_| \_|\____|
-                                                               
-     ____ _____  _    _   _ ____    _    ____  ____  ____      
-    / ___|_   _|/ \  | \ | |  _ \  / \  |  _ \|  _ \/ ___|     
-    \___ \ | | / _ \ |  \| | | | |/ _ \ | |_) | | | \___ \     
-     ___) || |/ ___ \| |\  | |_| / ___ \|  _ <| |_| |___) |    
-    |____/ |_/_/   \_\_| \_|____/_/   \_\_| \_\____/|____/     
-                                                               
-        ____ _   _ _____ ____ _  ___     ___ ____ _____        
-       / ___| | | | ____/ ___| |/ / |   |_ _/ ___|_   _|       
-      | |   | |_| |  _|| |   | ' /| |    | |\___ \ | |         
-      | |___|  _  | |__| |___| . \| |___ | | ___) || |         
-       \____|_| |_|_____\____|_|\_\_____|___|____/ |_|         
-                                                               
-              [ ENGINEERING INTEGRITY FRAMEWORK ]              
-                                                               
-                   SYSTEM STATUS: DOCUMENTED                   
-                   VISIBILITY TARGET: PUBLIC                   
-                VERIFICATION: EVIDENCE REQUIRED                
-```
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/banner-dark.svg">
+  <img src="docs/assets/banner-light.svg" alt="Engineering Standards Checklist: Engineering Integrity Framework">
+</picture>
 
 **AUDIT. VERIFY. HARDEN. SHIP.**
 
@@ -236,19 +215,10 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). Contributions should preserve stable che
 
 <div align="center">
 
-```text
-               [ SYSTEM MESSAGE ]              
-                                               
-      TRUST IS NOT A VERIFICATION METHOD.      
-          CONFIDENCE IS NOT EVIDENCE.          
-A PASSING TEST IS EVIDENCE WITHIN ITS COVERAGE.
-                                               
-                VERIFY THE WORK.               
-             DOCUMENT THE EVIDENCE.            
-                OWN THE RESULT.                
-                                               
-              [ END TRANSMISSION ]             
-```
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/system-message-dark.svg">
+  <img src="docs/assets/system-message-light.svg" alt="System message: Trust is not a verification method. Confidence is not evidence. A passing test is evidence within its coverage. Verify the work. Document the evidence. Own the result.">
+</picture>
 
 **ENGINEERING-STANDARDS-CHECKLIST**  
 *Built for developers. Designed for AI-assisted engineering. Grounded in verification.*

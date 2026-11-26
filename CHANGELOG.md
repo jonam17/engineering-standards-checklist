@@ -24,3 +24,5 @@ This file records material repository changes. It does not replace the original 
 - README banner now spells out "ENGINEERING STANDARDS CHECKLIST".
 - Link check: excluded ftc.gov and peoplecert.org (they reject GitHub-hosted runners but load in browsers), added retries, and authenticated GitHub requests with `GITHUB_TOKEN` to avoid rate-limit errors.
 - Replaced the moved "OWASP AI Security and Privacy Guide" link with the OWASP AI Exchange (`https://owaspai.org/`) in the Universal Standard; only link targets and that project's name were changed.
+- Replaced the text banner in the README with theme-aware SVG images (`docs/assets/banner-light.svg`, `banner-dark.svg`) so the header is centered on every device and theme.
+- Converted the closing "System message" block in the README to theme-aware SVG images as well.
